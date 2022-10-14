@@ -4,13 +4,50 @@ Course: CSCI-135
 Instructor: Genady Maryash
 Assignment: Homework E5.15
 
-I wrote a function /*
-Author: Frida Mesa
-Course: CSCI-135
-Instructor: Genady Maryash
-Assignment: Homework E2.10 - Cost per 100 Miles
-Asks the user for the number of gallons of gas in their tank, the fuel effiency in miles per gallon, and the price of gas per gallon.
-It then prints the cost per 100 miles and how far the car can go with the gas.
-*/
+I wrote a function that swaps its three arguments to arrange them in sorted order
 
 */
+
+#include <iostream>
+using namespace std;
+void sort3(int& a, int& b, int& c)
+
+{
+int temp;
+if(a > c)
+
+{
+temp = a;
+a = c;
+c = temp;
+}
+
+if(a > b)
+{
+temp = a;
+a = b;
+b = temp;
+}
+
+if(b > c)
+{
+temp = b;
+b = c;
+c = temp;
+}
+}
+
+int main() 
+{
+int v = 3;
+int w = 4;
+int x = 1;
+
+sort3(v, w, x);
+cout<<"v = "<<v<<endl;
+cout<<"w = "<<w<<endl;
+cout<<"x = "<<x<<endl;
+
+return 0;
+
+}
